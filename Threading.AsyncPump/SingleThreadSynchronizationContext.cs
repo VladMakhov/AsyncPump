@@ -30,7 +30,7 @@ namespace Threading.AsyncPump
             m_queue.Add(new KeyValuePair<SendOrPostCallback, object>(d, state));
         }
 
-        /// <summary>Not supported single-theared context.</summary>
+        /// <summary>Not supported.</summary>
 		public override void Send(SendOrPostCallback d, object state)
         {
             throw new NotSupportedException("Synchronously sending is not supported.");
